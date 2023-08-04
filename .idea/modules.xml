@@ -3,6 +3,16 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/shoppingMall.iml" filepath="$PROJECT_DIR$/.idea/shoppingMall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopAdmin/yami-shop-admin.iml" filepath="$PROJECT_DIR$/shopAdmin/yami-shop-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopApi/yami-shop-api.iml" filepath="$PROJECT_DIR$/shopApi/yami-shop-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopBean/yami-shop-bean.iml" filepath="$PROJECT_DIR$/shopBean/yami-shop-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopCommon/yami-shop-common.iml" filepath="$PROJECT_DIR$/shopCommon/yami-shop-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopSecurity/yami-shop-security.iml" filepath="$PROJECT_DIR$/shopSecurity/yami-shop-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopSecurity/shopSecurity-admin/yami-shop-security-admin.iml" filepath="$PROJECT_DIR$/shopSecurity/shopSecurity-admin/yami-shop-security-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopSecurity/shopSecurity-api/yami-shop-security-api.iml" filepath="$PROJECT_DIR$/shopSecurity/shopSecurity-api/yami-shop-security-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopSecurity/shopSecurity-common/yami-shop-security-common.iml" filepath="$PROJECT_DIR$/shopSecurity/shopSecurity-common/yami-shop-security-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopService/yami-shop-service.iml" filepath="$PROJECT_DIR$/shopService/yami-shop-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopSys/yami-shop-sys.iml" filepath="$PROJECT_DIR$/shopSys/yami-shop-sys.iml" />
     </modules>
   </component>
 </project>

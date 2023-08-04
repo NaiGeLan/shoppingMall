@@ -30,5 +30,6 @@ public class SwaggerConfiguration {
 				.info(new Info().title("Mall4j接口文档")
 						.description("Mall4j接口文档，openapi3.0 接口，用于前端对接")
 						.version("v0.0.1")
+						.license(new License().name("使用请遵守AGPL3.0授权协议").url("https://www.mall4j.com")));
 	}
 }

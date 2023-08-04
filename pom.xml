@@ -8,13 +8,13 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>yami-shop-admin</module>
-        <module>yami-shop-sys</module>
-        <module>yami-shop-common</module>
-        <module>yami-shop-api</module>
-        <module>yami-shop-bean</module>
-        <module>yami-shop-service</module>
-        <module>yami-shop-security</module>
+        <module>shopAdmin</module>
+        <module>shopSys</module>
+        <module>shopCommon</module>
+        <module>shopApi</module>
+        <module>shopBean</module>
+        <module>shopService</module>
+        <module>shopSecurity</module>
     </modules>
 
     <properties>

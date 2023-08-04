@@ -29,7 +29,7 @@
         <dependency>
             <groupId>com.yami.shop</groupId>
             <artifactId>yami-shop-security-admin</artifactId>
-            <version>${yami.shop.version}</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.xuxueli</groupId>

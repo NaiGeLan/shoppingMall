@@ -15,8 +15,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>yami-shop-security-api</module>
-		<module>yami-shop-security-admin</module>
-		<module>yami-shop-security-common</module>
+		<module>shopSecurity-admin</module>
+		<module>shopSecurity-api</module>
+		<module>shopSecurity-common</module>
 	</modules>
 </project>
