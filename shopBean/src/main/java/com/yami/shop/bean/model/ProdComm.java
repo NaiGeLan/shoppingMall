@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 商品评论
  *
- * @author xwc
+ * @author NaiGeLan
  * @date 2019-04-19 10:43:57
  */
 @Data
