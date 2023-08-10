@@ -30,6 +30,10 @@ public class UserInfoInTokenBO {
     private String nickName;
 
     /**
+     * 头像
+     */
+    private String pic;
+    /**
      * 系统类型
      * @see com.yami.shop.security.common.enums.SysTypeEnum
      */

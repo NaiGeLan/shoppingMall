@@ -52,11 +52,14 @@ public class LoginController {
 
         // 半小时内密码输入错误十次，已限制登录30分钟
         passwordCheckManager.checkPassword(SysTypeEnum.ORDINARY,authenticationDTO.getUserName(), decryptPassword, user.getLoginPassword());
-
+        System.out.println(user);
         UserInfoInTokenBO userInfoInToken = new UserInfoInTokenBO();
         userInfoInToken.setUserId(user.getUserId());
         userInfoInToken.setSysType(SysTypeEnum.ORDINARY.value());
         userInfoInToken.setEnabled(user.getStatus() == 1);
+        userInfoInToken.setNickName(user.getNickName());
+        userInfoInToken.setPic(user.getPic());
+        System.out.println(userInfoInToken);
         // 存储token返回vo
         TokenInfoVO tokenInfoVO = tokenStore.storeAndGetVo(userInfoInToken);
         return ServerResponseEntity.success(tokenInfoVO);

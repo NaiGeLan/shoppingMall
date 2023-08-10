@@ -1,6 +1,8 @@
 
 package com.yami.shop.security.common.vo;
 
+import com.yami.shop.bean.model.User;
+import com.yami.shop.security.common.bo.UserInfoInTokenBO;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -12,6 +14,9 @@ import lombok.Data;
  */
 @Data
 public class TokenInfoVO {
+    @Schema(description = "userInfoInToken")
+    private
+    UserInfoInTokenBO userInfoInToken;
 
     @Schema(description = "accessToken" )
     private String accessToken;

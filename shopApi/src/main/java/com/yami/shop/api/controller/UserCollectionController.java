@@ -42,7 +42,7 @@ public class UserCollectionController {
         return ServerResponseEntity.success(userCollectionService.getUserCollectionDtoPageByUserId(page, SecurityUtils.getUser().getUserId()));
     }
 
-    @GetMapping("isCollection")
+    @GetMapping("/isCollection")
     @Operation(summary = "根据商品id获取该商品是否在收藏夹中" , description = "传入收藏商品id")
     public ServerResponseEntity<Boolean> isCollection(Long prodId) {
         if (productService.count(new LambdaQueryWrapper<Product>()

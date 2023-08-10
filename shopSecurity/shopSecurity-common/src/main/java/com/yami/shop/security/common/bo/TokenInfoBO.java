@@ -22,6 +22,7 @@ public class TokenInfoBO {
 
     private String refreshToken;
 
+    private String userId;
     /**
      * 在多少秒后过期
      */

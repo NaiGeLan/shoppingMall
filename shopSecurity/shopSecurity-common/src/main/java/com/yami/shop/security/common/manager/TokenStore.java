@@ -65,6 +65,7 @@ public class TokenStore {
         tokenInfoBO.setExpiresIn(timeoutSecond);
         tokenInfoBO.setAccessToken(token);
         tokenInfoBO.setRefreshToken(token);
+        System.out.println(tokenInfoBO);
         return tokenInfoBO;
     }
 
@@ -152,6 +153,7 @@ public class TokenStore {
         TokenInfoBO tokenInfoBO = storeAccessSaToken(userInfoInToken);
         // 数据封装返回
         TokenInfoVO tokenInfoVO = new TokenInfoVO();
+        tokenInfoVO.setUserInfoInToken(tokenInfoBO.getUserInfoInToken());
         tokenInfoVO.setAccessToken(tokenInfoBO.getAccessToken());
         tokenInfoVO.setRefreshToken(tokenInfoBO.getRefreshToken());
         tokenInfoVO.setExpiresIn(tokenInfoBO.getExpiresIn());
