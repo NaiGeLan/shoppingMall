@@ -10,6 +10,7 @@ import com.yami.shop.common.exception.YamiShopBindException;
 import com.yami.shop.common.response.ServerResponseEntity;
 import com.yami.shop.security.admin.dto.CaptchaAuthenticationDTO;
 import com.yami.shop.security.common.bo.UserInfoInTokenBO;
+import com.yami.shop.security.common.dto.AuthenticationDTO;
 import com.yami.shop.security.common.enums.SysTypeEnum;
 import com.yami.shop.security.common.manager.PasswordCheckManager;
 import com.yami.shop.security.common.manager.PasswordManager;
@@ -62,23 +63,23 @@ public class AdminLoginController {
     @PostMapping("/adminLogin")
     @Operation(summary = "账号密码 + 验证码登录(用于后台登录)" , description = "通过账号/手机号/用户名密码登录")
     public ServerResponseEntity<?> login(
-            @Valid @RequestBody CaptchaAuthenticationDTO captchaAuthenticationDTO) {
+            @Valid @RequestBody AuthenticationDTO authenticationDTO) {
         // 登陆后台登录需要再校验一遍验证码
-        CaptchaVO captchaVO = new CaptchaVO();
-        captchaVO.setCaptchaVerification(captchaAuthenticationDTO.getCaptchaVerification());
-        ResponseModel response = captchaService.verification(captchaVO);
-        if (!response.isSuccess()) {
-            return ServerResponseEntity.showFailMsg("验证码有误或已过期");
-        }
+//        CaptchaVO captchaVO = new CaptchaVO();
+//        captchaVO.setCaptchaVerification(captchaAuthenticationDTO.getCaptchaVerification());
+//        ResponseModel response = captchaService.verification(captchaVO);
+//        if (!response.isSuccess()) {
+//            return ServerResponseEntity.showFailMsg("验证码有误或已过期");
+//        }
 
-        SysUser sysUser = sysUserService.getByUserName(captchaAuthenticationDTO.getUserName());
+        SysUser sysUser = sysUserService.getByUserName(authenticationDTO.getUserName());
         if (sysUser == null) {
             throw new YamiShopBindException("账号或密码不正确");
         }
 
         // 半小时内密码输入错误十次，已限制登录30分钟
-        String decryptPassword = passwordManager.decryptPassword(captchaAuthenticationDTO.getPassWord());
-        passwordCheckManager.checkPassword(SysTypeEnum.ADMIN,captchaAuthenticationDTO.getUserName(), decryptPassword, sysUser.getPassword());
+        String decryptPassword = passwordManager.decryptPassword(authenticationDTO.getPassWord());
+        passwordCheckManager.checkPassword(SysTypeEnum.ADMIN,authenticationDTO.getUserName(), decryptPassword, sysUser.getPassword());
 
         // 不是店铺超级管理员，并且是禁用状态，无法登录
         if (Objects.equals(sysUser.getStatus(),0)) {
