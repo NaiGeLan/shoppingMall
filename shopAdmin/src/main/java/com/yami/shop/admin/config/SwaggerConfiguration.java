@@ -27,8 +27,8 @@ public class SwaggerConfiguration {
 	@Bean
 	public OpenAPI springShopOpenApi() {
 		return new OpenAPI()
-				.info(new Info().title("Mall4j接口文档")
-						.description("Mall4j接口文档，openapi3.0 接口，用于前端对接")
+				.info(new Info().title("NaiGeLan")
+						.description("NaiGeLan-admin接口文档，openapi3.0 接口，用于前端对接")
 						.version("v0.0.1")
 						.license(new License().name("使用请遵守AGPL3.0授权协议").url("https://www.mall4j.com")));
 	}
